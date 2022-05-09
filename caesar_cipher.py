@@ -29,9 +29,73 @@ except ImportError:
 # you could add other symbols if you want.
 ALPHALETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-# Prompt 1 :  The user has the choice to encrypt a mesaage or decrypt a message
-print("You entered the MI6 Network decryption program. Unauthorized Access Prohibited")
 
+print("You entered the 'Am I 6?' Network - Encryption/Decryption program loading... Unauthorized Access Prohibited")
+
+# PROMPT 1 - ENCRYPT OR DECRYPT ?
+while True:
+    # The user has the choice to encrypt a mesaage or decrypt a message
+    print(" Please, enter 'e' for encryption or 'd' for decryption")
+
+    prompt1 = input('> ').lower()
+
+    # this is a loop that will run forever(while True) if we don't stop it somehow.
+    # if the user enter the expected input, the program will stop reprompting for an input.
+    if prompt1.startswith('e'):
+        mode = 'encrypt'
+        break
+    elif prompt1.startswith('d'):
+        mode = 'decrypt'
+        break
+
+    print('Please, enter the letter e or d')
+
+# PROMPT2 - WHAT IS THE LENGTH OF THE KEY
 while True:
 
-    print(" enter 'e' dor encryption or 'd' for decryption")
+    maxKeyVal = len(ALPHALETTERS) - 1 
+    print('Please enter the encryption key value (o to {}) to use'.format(maxKeyVal))
+    prompt2 = input('> ').upper()
+
+    # In the case that the user enter something else than a number the program will stop
+    if not prompt2.isdecimal():
+        continue
+    # Otherwise the program will continue
+    if 0 <= int(prompt2) < len(ALPHALETTERS):
+        key = int(prompt2)
+        break
+
+# PROMPT 3 - MESSAGE TO ENCRYPT OR DECRYPYT
+print('Enter the message content you wish to encrypt/decrypyt : {}'.format(mode))
+prompt3=input('> ')
+
+# the algorithm will only work if the message is in capital letters
+prompt3 = prompt3.upper()
+
+# save the message encrypted
+cipher  = ''
+
+# ENCRYPT / DECRYPT
+
+# for each letter in the input(message)
+for letter in prompt3:
+    #check if each letter or symbol included in the loist of possible letter or symbols
+    if letter in ALPHALETTERS:
+        # get the number associated to the letter
+        num = ALPHALETTERS.find(letter)
+        if mode == 'encrypt':
+            num = num + key
+        elif mode == 'decrypt':
+            num = num - key
+
+
+    
+
+
+
+
+
+
+
+
+
