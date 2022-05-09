@@ -7,4 +7,8 @@ The caesar cipher is a encryption algorithm that was used By Caesar :
 
             ex: for a key of value 3, (B will become E)
 
-the code contained in 
+the code contained in the caesar_cipher.py has been adapted fron the book :
+
+Sweigart, Al. The Big Book of Small Python Projects: 81 Easy Practice Programs. No Starch Press, 2021, pg 29
+
+
