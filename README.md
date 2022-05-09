@@ -1,7 +1,7 @@
 # caesar_cipher
 Context : 
 
-Vesper would like to go on vacation with James Bond and decides to send him a message. Spectre is still a danger and she fears that the message could be intercepted. For that reason, she compiles a program called 'caesar_cipher.py' using the pyton language in order to encrypt her message. 
+Vesper would like to go on vacation with James Bond and decides to send him a message.  As Spectre is still a danger,  she fears that the message could be intercepted. For that reason, she compiles a program called 'caesar_cipher.py' using the pyton language in order to encrypt her message. 
 
 On the  over hand, James Bond just came back from his poker game in Montenegro(see 'Casino Royal') and received a message from his sweetie Vesper. He realizes that the message is encrypted using the caesar cypher algorithm. James uses the program from the 'Am I 6?' which is very similar to the program compiled by Vesper. 
 

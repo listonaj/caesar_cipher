@@ -17,6 +17,9 @@ modifications and are translating back into characters. The output displays the 
 
 """
 
+from fnmatch import translate
+
+
 try:
     # copies text on a clipboard
     import pyperclip
@@ -42,10 +45,10 @@ while True:
     # this is a loop that will run forever(while True) if we don't stop it somehow.
     # if the user enter the expected input, the program will stop reprompting for an input.
     if prompt1.startswith('e'):
-        mode = 'encrypt'
+        mode = 'e'
         break
     elif prompt1.startswith('d'):
-        mode = 'decrypt'
+        mode = 'd'
         break
 
     print('Please, enter the letter e or d')
@@ -79,14 +82,44 @@ cipher  = ''
 
 # for each letter in the input(message)
 for letter in prompt3:
-    #check if each letter or symbol included in the loist of possible letter or symbols
+    #check if each letter or symbol are in the list of possible letter or symbols
     if letter in ALPHALETTERS:
         # get the number associated to the letter
         num = ALPHALETTERS.find(letter)
-        if mode == 'encrypt':
+
+        if mode == 'e':
             num = num + key
-        elif mode == 'decrypt':
+        elif mode == 'd':
             num = num - key
+
+        # cases if number is larger or smaller than the length
+        # alphabets letters defined in the global variable
+        if num >= len(ALPHALETTERS):
+            num = num  - len(ALPHALETTERS)
+        elif num < 0:
+            num = num + len(ALPHALETTERS) 
+
+
+        cipher = cipher + ALPHALETTERS[num]
+
+    else:
+        # add the symbol without encrypting it
+        cipher = cipher
+
+
+print(cipher)
+
+try:
+    pyperclip.copy(cipher)
+    print('Full text copied tom clipboard.'.format(mode))
+
+# if pyperclip isn't installed in your computer, do nothing.
+except:
+    pass 
+
+        
+
+
 
 
     
