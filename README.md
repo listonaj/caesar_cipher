@@ -1,12 +1,12 @@
 # caesar_cipher
 Context : 
 
-Vesper would like to go on vacation with James Bond and decide to send him a message. Spectre is still a danger and she fears that the message could be intercepted.  She can code a bit in Python and she compile a program 'caesar_cipher.py' in order to encrypt her message. 
+Vesper would like to go on vacation with James Bond and decide to send him a message. Spectre is still a danger and she fears that the message could be intercepted. For that reason, she compiles a program called 'caesar_cipher.py' using the pyton language in order to encrypt her message. 
 
-James Bond just came back from his poker game in Montenegro(see 'Casino Royal') and received a message from his sweetie Vesper. He realizes that the message is encrypted using the caesar cypher algorithm. James has a copy of the program compiled by Vesper and run the code to decrypt it.
+On the  over hand, James Bond just came back from his poker game in Montenegro(see 'Casino Royal') and received a message from his sweetie Vesper. He realizes that the message is encrypted using the caesar cypher algorithm. James has a copy of the program compiled by Vesper and run the code to decrypt it.
 
 
-The caesar cipher is a encryption algorithm that was used By Caesar :
+Note : The caesar cipher is a encryption algorithm that was used By Caesar :
 
 - the algo shifs letters by a certain number of place in the alphabet.
 - the key is the length of the shift
@@ -16,4 +16,6 @@ The caesar cipher is a encryption algorithm that was used By Caesar :
 for more info about the algorithm: 
 
 https://www.geeksforgeeks.org/caesar-cipher-in-cryptography/
+
+
 
